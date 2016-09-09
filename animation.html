@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+.test{
+    display:block;
+    width:100px;
+    height:20px;
+    border:1px solid #ff0000;
+    -webkit-animation:f0 2s 0.5s 1  linear;
+    -webkit-animation-fill-mode:forwards;
+}
+.test-high{
+    width:500px;
+    -webkit-animation:f1 2s 0.5s 1  linear;
+    /*-webkit-animation-fill-mode:forwards;*/
+}
+@-webkit-keyframes f0{
+    0%{width:100px;}
+    100%{width:500px;}
+}
+@-webkit-keyframes f1{
+    0%{height:20px;}
+    100%{height:200px;}
+}
+</style>
+</head>
+<body>
+<div>
+<div class="test">我会长大</div>
+<button type="button" onclick="goHigher()">变高一点</button>
+<script>
+ function goHigher(){
+  document.getElementsByClassName("test")[0].className = "test test-high";
+ }
+</script>
+</body>
+</html>
